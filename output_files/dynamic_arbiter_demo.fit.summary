@@ -1,14 +1,14 @@
-Fitter Status : Successful - Wed Apr 07 19:58:54 2021
+Fitter Status : Successful - Wed Apr 07 20:08:46 2021
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : dynamic_arbiter_demo
 Top-level Entity Name : dynamic_arbiter_demo
 Family : Cyclone IV E
 Device : EP4CE10E22C8
 Timing Models : Final
-Total logic elements : 123 / 10,320 ( 1 % )
-    Total combinational functions : 123 / 10,320 ( 1 % )
-    Dedicated logic registers : 54 / 10,320 ( < 1 % )
-Total registers : 54
+Total logic elements : 112 / 10,320 ( 1 % )
+    Total combinational functions : 112 / 10,320 ( 1 % )
+    Dedicated logic registers : 53 / 10,320 ( < 1 % )
+Total registers : 53
 Total pins : 26 / 92 ( 28 % )
 Total virtual pins : 0
 Total memory bits : 0 / 423,936 ( 0 % )

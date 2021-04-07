@@ -6,7 +6,7 @@ module slow_arbiter #(parameter N = 4, parameter LN = $clog2(N)) (
   output [LN-1:0] grant,
   output valid
 );
-  reg [24:0] counter;
+  reg [23:0] counter;
   
   always @(posedge clk)
     if (rst)
