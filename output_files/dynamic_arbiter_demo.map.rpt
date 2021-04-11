@@ -1,5 +1,5 @@
 Analysis & Synthesis report for dynamic_arbiter_demo
-Wed Apr 07 20:08:41 2021
+Sun Apr 11 18:34:36 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -15,15 +15,24 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
   9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Parameter Settings for User Entity Instance: slow_arbiter:sa
- 11. Parameter Settings for User Entity Instance: slow_arbiter:sa|dynamic_priority_arbiter_rra:dpar
- 12. Parameter Settings for User Entity Instance: slow_arbiter:sa|dynamic_priority_arbiter_rra:dpar|rra:RRA
- 13. Port Connectivity Checks: "slow_arbiter:sa"
- 14. Port Connectivity Checks: "display:d"
- 15. Post-Synthesis Netlist Statistics for Top Partition
- 16. Elapsed Time Per Partition
- 17. Analysis & Synthesis Messages
- 18. Analysis & Synthesis Suppressed Messages
+ 10. Parameter Settings for User Entity Instance: sync_and_debounce:debounce
+ 11. Parameter Settings for User Entity Instance: sync_and_debounce:debounce|sync_and_debounce_one:gen_sync_and_debounce[0].i_sync_and_debounce_one
+ 12. Parameter Settings for User Entity Instance: sync_and_debounce:debounce|sync_and_debounce_one:gen_sync_and_debounce[1].i_sync_and_debounce_one
+ 13. Parameter Settings for User Entity Instance: sync_and_debounce:debounce|sync_and_debounce_one:gen_sync_and_debounce[2].i_sync_and_debounce_one
+ 14. Parameter Settings for User Entity Instance: sync_and_debounce:debounce|sync_and_debounce_one:gen_sync_and_debounce[3].i_sync_and_debounce_one
+ 15. Parameter Settings for User Entity Instance: sync_and_debounce:debounce|sync_and_debounce_one:gen_sync_and_debounce[4].i_sync_and_debounce_one
+ 16. Parameter Settings for User Entity Instance: sync_and_debounce:debounce|sync_and_debounce_one:gen_sync_and_debounce[5].i_sync_and_debounce_one
+ 17. Parameter Settings for User Entity Instance: sync_and_debounce:debounce|sync_and_debounce_one:gen_sync_and_debounce[6].i_sync_and_debounce_one
+ 18. Parameter Settings for User Entity Instance: sync_and_debounce:debounce|sync_and_debounce_one:gen_sync_and_debounce[7].i_sync_and_debounce_one
+ 19. Parameter Settings for User Entity Instance: slow_arbiter:sa
+ 20. Parameter Settings for User Entity Instance: slow_arbiter:sa|dynamic_priority_arbiter_rra:dpar
+ 21. Parameter Settings for User Entity Instance: slow_arbiter:sa|dynamic_priority_arbiter_rra:dpar|rra:RRA
+ 22. Port Connectivity Checks: "slow_arbiter:sa"
+ 23. Port Connectivity Checks: "display:d"
+ 24. Post-Synthesis Netlist Statistics for Top Partition
+ 25. Elapsed Time Per Partition
+ 26. Analysis & Synthesis Messages
+ 27. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -50,15 +59,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Apr 07 20:08:41 2021       ;
+; Analysis & Synthesis Status        ; Successful - Sun Apr 11 18:34:36 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; dynamic_arbiter_demo                        ;
 ; Top-level Entity Name              ; dynamic_arbiter_demo                        ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 112                                         ;
-;     Total combinational functions  ; 112                                         ;
-;     Dedicated logic registers      ; 53                                          ;
-; Total registers                    ; 53                                          ;
+; Total logic elements               ; 236                                         ;
+;     Total combinational functions  ; 220                                         ;
+;     Dedicated logic registers      ; 149                                         ;
+; Total registers                    ; 149                                         ;
 ; Total pins                         ; 26                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -180,6 +189,8 @@ https://fpgasoftware.intel.com/eula.
 ; rra.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/KIRUHA/Documents/fpga/rra.sv                          ;         ;
 ; dynamic_priority_arbiter_rra.sv  ; yes             ; User SystemVerilog HDL File  ; C:/Users/KIRUHA/Documents/fpga/dynamic_priority_arbiter_rra.sv ;         ;
 ; slow_arbiter.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/KIRUHA/Documents/fpga/slow_arbiter.sv                 ;         ;
+; sync_and_debounce_one.sv         ; yes             ; User SystemVerilog HDL File  ; C:/Users/KIRUHA/Documents/fpga/sync_and_debounce_one.sv        ;         ;
+; sync_and_debounce.sv             ; yes             ; User SystemVerilog HDL File  ; C:/Users/KIRUHA/Documents/fpga/sync_and_debounce.sv            ;         ;
 +----------------------------------+-----------------+------------------------------+----------------------------------------------------------------+---------+
 
 
@@ -188,20 +199,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 112       ;
+; Estimated Total logic elements              ; 236       ;
 ;                                             ;           ;
-; Total combinational functions               ; 112       ;
+; Total combinational functions               ; 220       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 51        ;
-;     -- 3 input functions                    ; 16        ;
-;     -- <=2 input functions                  ; 45        ;
+;     -- 4 input functions                    ; 78        ;
+;     -- 3 input functions                    ; 14        ;
+;     -- <=2 input functions                  ; 128       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 74        ;
-;     -- arithmetic mode                      ; 38        ;
+;     -- normal mode                          ; 126       ;
+;     -- arithmetic mode                      ; 94        ;
 ;                                             ;           ;
-; Total registers                             ; 53        ;
-;     -- Dedicated logic registers            ; 53        ;
+; Total registers                             ; 149       ;
+;     -- Dedicated logic registers            ; 149       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 26        ;
@@ -209,23 +220,32 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 53        ;
-; Total fan-out                               ; 538       ;
-; Average fan-out                             ; 2.48      ;
+; Maximum fan-out                             ; 149       ;
+; Total fan-out                               ; 1142      ;
+; Average fan-out                             ; 2.71      ;
 +---------------------------------------------+-----------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                  ;
-+-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------+------------------------------+--------------+
-; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                             ; Entity Name                  ; Library Name ;
-+-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------+------------------------------+--------------+
-; |dynamic_arbiter_demo                     ; 112 (0)             ; 53 (0)                    ; 0           ; 0            ; 0       ; 0         ; 26   ; 0            ; |dynamic_arbiter_demo                                                           ; dynamic_arbiter_demo         ; work         ;
-;    |display:d|                            ; 38 (38)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dynamic_arbiter_demo|display:d                                                 ; display                      ; work         ;
-;    |slow_arbiter:sa|                      ; 74 (31)             ; 30 (24)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dynamic_arbiter_demo|slow_arbiter:sa                                           ; slow_arbiter                 ; work         ;
-;       |dynamic_priority_arbiter_rra:dpar| ; 43 (1)              ; 6 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dynamic_arbiter_demo|slow_arbiter:sa|dynamic_priority_arbiter_rra:dpar         ; dynamic_priority_arbiter_rra ; work         ;
-;          |rra:RRA|                        ; 42 (42)             ; 6 (6)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dynamic_arbiter_demo|slow_arbiter:sa|dynamic_priority_arbiter_rra:dpar|rra:RRA ; rra                          ; work         ;
-+-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------+------------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                               ;
++--------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+------------------------------+--------------+
+; Compilation Hierarchy Node                                                     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                     ; Entity Name                  ; Library Name ;
++--------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+------------------------------+--------------+
+; |dynamic_arbiter_demo                                                          ; 220 (0)             ; 149 (0)                   ; 0           ; 0            ; 0       ; 0         ; 26   ; 0            ; |dynamic_arbiter_demo                                                                                                   ; dynamic_arbiter_demo         ; work         ;
+;    |display:d|                                                                 ; 38 (38)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dynamic_arbiter_demo|display:d                                                                                         ; display                      ; work         ;
+;    |slow_arbiter:sa|                                                           ; 78 (31)             ; 30 (24)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dynamic_arbiter_demo|slow_arbiter:sa                                                                                   ; slow_arbiter                 ; work         ;
+;       |dynamic_priority_arbiter_rra:dpar|                                      ; 47 (8)              ; 6 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dynamic_arbiter_demo|slow_arbiter:sa|dynamic_priority_arbiter_rra:dpar                                                 ; dynamic_priority_arbiter_rra ; work         ;
+;          |rra:RRA|                                                             ; 39 (39)             ; 6 (6)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dynamic_arbiter_demo|slow_arbiter:sa|dynamic_priority_arbiter_rra:dpar|rra:RRA                                         ; rra                          ; work         ;
+;    |sync_and_debounce:debounce|                                                ; 104 (0)             ; 96 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dynamic_arbiter_demo|sync_and_debounce:debounce                                                                        ; sync_and_debounce            ; work         ;
+;       |sync_and_debounce_one:gen_sync_and_debounce[0].i_sync_and_debounce_one| ; 13 (13)             ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dynamic_arbiter_demo|sync_and_debounce:debounce|sync_and_debounce_one:gen_sync_and_debounce[0].i_sync_and_debounce_one ; sync_and_debounce_one        ; work         ;
+;       |sync_and_debounce_one:gen_sync_and_debounce[1].i_sync_and_debounce_one| ; 13 (13)             ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dynamic_arbiter_demo|sync_and_debounce:debounce|sync_and_debounce_one:gen_sync_and_debounce[1].i_sync_and_debounce_one ; sync_and_debounce_one        ; work         ;
+;       |sync_and_debounce_one:gen_sync_and_debounce[2].i_sync_and_debounce_one| ; 13 (13)             ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dynamic_arbiter_demo|sync_and_debounce:debounce|sync_and_debounce_one:gen_sync_and_debounce[2].i_sync_and_debounce_one ; sync_and_debounce_one        ; work         ;
+;       |sync_and_debounce_one:gen_sync_and_debounce[3].i_sync_and_debounce_one| ; 13 (13)             ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dynamic_arbiter_demo|sync_and_debounce:debounce|sync_and_debounce_one:gen_sync_and_debounce[3].i_sync_and_debounce_one ; sync_and_debounce_one        ; work         ;
+;       |sync_and_debounce_one:gen_sync_and_debounce[4].i_sync_and_debounce_one| ; 13 (13)             ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dynamic_arbiter_demo|sync_and_debounce:debounce|sync_and_debounce_one:gen_sync_and_debounce[4].i_sync_and_debounce_one ; sync_and_debounce_one        ; work         ;
+;       |sync_and_debounce_one:gen_sync_and_debounce[5].i_sync_and_debounce_one| ; 13 (13)             ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dynamic_arbiter_demo|sync_and_debounce:debounce|sync_and_debounce_one:gen_sync_and_debounce[5].i_sync_and_debounce_one ; sync_and_debounce_one        ; work         ;
+;       |sync_and_debounce_one:gen_sync_and_debounce[6].i_sync_and_debounce_one| ; 13 (13)             ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dynamic_arbiter_demo|sync_and_debounce:debounce|sync_and_debounce_one:gen_sync_and_debounce[6].i_sync_and_debounce_one ; sync_and_debounce_one        ; work         ;
+;       |sync_and_debounce_one:gen_sync_and_debounce[7].i_sync_and_debounce_one| ; 13 (13)             ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dynamic_arbiter_demo|sync_and_debounce:debounce|sync_and_debounce_one:gen_sync_and_debounce[7].i_sync_and_debounce_one ; sync_and_debounce_one        ; work         ;
++--------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -234,10 +254,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 53    ;
-; Number of registers using Synchronous Clear  ; 45    ;
+; Total registers                              ; 149   ;
+; Number of registers using Synchronous Clear  ; 109   ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 96    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 5     ;
 ; Number of registers using Preset             ; 0     ;
@@ -252,6 +272,97 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |dynamic_arbiter_demo|slow_arbiter:sa|dynamic_priority_arbiter_rra:dpar|rra:RRA|pointer_reg[2] ;
 ; 74:1               ; 3 bits    ; 147 LEs       ; 129 LEs              ; 18 LEs                 ; Yes        ; |dynamic_arbiter_demo|slow_arbiter:sa|dynamic_priority_arbiter_rra:dpar|rra:RRA|grant_reg[2]   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sync_and_debounce:debounce ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; w              ; 8     ; Signed Integer                                 ;
+; depth          ; 8     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sync_and_debounce:debounce|sync_and_debounce_one:gen_sync_and_debounce[0].i_sync_and_debounce_one ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                  ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------------+
+; depth          ; 8     ; Signed Integer                                                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sync_and_debounce:debounce|sync_and_debounce_one:gen_sync_and_debounce[1].i_sync_and_debounce_one ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                  ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------------+
+; depth          ; 8     ; Signed Integer                                                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sync_and_debounce:debounce|sync_and_debounce_one:gen_sync_and_debounce[2].i_sync_and_debounce_one ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                  ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------------+
+; depth          ; 8     ; Signed Integer                                                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sync_and_debounce:debounce|sync_and_debounce_one:gen_sync_and_debounce[3].i_sync_and_debounce_one ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                  ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------------+
+; depth          ; 8     ; Signed Integer                                                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sync_and_debounce:debounce|sync_and_debounce_one:gen_sync_and_debounce[4].i_sync_and_debounce_one ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                  ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------------+
+; depth          ; 8     ; Signed Integer                                                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sync_and_debounce:debounce|sync_and_debounce_one:gen_sync_and_debounce[5].i_sync_and_debounce_one ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                  ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------------+
+; depth          ; 8     ; Signed Integer                                                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sync_and_debounce:debounce|sync_and_debounce_one:gen_sync_and_debounce[6].i_sync_and_debounce_one ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                  ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------------+
+; depth          ; 8     ; Signed Integer                                                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sync_and_debounce:debounce|sync_and_debounce_one:gen_sync_and_debounce[7].i_sync_and_debounce_one ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                  ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------------+
+; depth          ; 8     ; Signed Integer                                                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +--------------------------------------------------------------+
@@ -353,21 +464,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 26                          ;
-; cycloneiii_ff         ; 53                          ;
+; cycloneiii_ff         ; 149                         ;
+;     CLR               ; 32                          ;
+;     CLR SCLR          ; 64                          ;
 ;     ENA SCLR          ; 5                           ;
 ;     SCLR              ; 40                          ;
 ;     plain             ; 8                           ;
-; cycloneiii_lcell_comb ; 124                         ;
-;     arith             ; 38                          ;
-;         2 data inputs ; 38                          ;
-;     normal            ; 86                          ;
-;         1 data inputs ; 14                          ;
-;         2 data inputs ; 5                           ;
-;         3 data inputs ; 16                          ;
-;         4 data inputs ; 51                          ;
+; cycloneiii_lcell_comb ; 232                         ;
+;     arith             ; 94                          ;
+;         2 data inputs ; 94                          ;
+;     normal            ; 138                         ;
+;         1 data inputs ; 30                          ;
+;         2 data inputs ; 16                          ;
+;         3 data inputs ; 14                          ;
+;         4 data inputs ; 78                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 3.11                        ;
+; Average LUT depth     ; 2.28                        ;
 +-----------------------+-----------------------------+
 
 
@@ -376,7 +489,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -386,13 +499,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Apr 07 20:08:32 2021
+    Info: Processing started: Sun Apr 11 18:34:27 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off dynamic_arbiter_demo -c dynamic_arbiter_demo
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file display.sv
     Info (12023): Found entity 1: display File: C:/Users/KIRUHA/Documents/fpga/display.sv Line: 1
-Warning (10275): Verilog HDL Module Instantiation warning at dynamic_arbiter_demo.sv(33): ignored dangling comma in List of Port Connections File: C:/Users/KIRUHA/Documents/fpga/dynamic_arbiter_demo.sv Line: 33
 Info (12021): Found 1 design units, including 1 entities, in source file dynamic_arbiter_demo.sv
     Info (12023): Found entity 1: dynamic_arbiter_demo File: C:/Users/KIRUHA/Documents/fpga/dynamic_arbiter_demo.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file linear_dynamic_priority_arbiter.sv
@@ -403,10 +515,16 @@ Info (12021): Found 1 design units, including 1 entities, in source file dynamic
     Info (12023): Found entity 1: dynamic_priority_arbiter_rra File: C:/Users/KIRUHA/Documents/fpga/dynamic_priority_arbiter_rra.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file slow_arbiter.sv
     Info (12023): Found entity 1: slow_arbiter File: C:/Users/KIRUHA/Documents/fpga/slow_arbiter.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sync_and_debounce_one.sv
+    Info (12023): Found entity 1: sync_and_debounce_one File: C:/Users/KIRUHA/Documents/fpga/sync_and_debounce_one.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sync_and_debounce.sv
+    Info (12023): Found entity 1: sync_and_debounce File: C:/Users/KIRUHA/Documents/fpga/sync_and_debounce.sv Line: 1
 Info (12127): Elaborating entity "dynamic_arbiter_demo" for the top level hierarchy
-Info (12128): Elaborating entity "display" for hierarchy "display:d" File: C:/Users/KIRUHA/Documents/fpga/dynamic_arbiter_demo.sv Line: 21
+Info (12128): Elaborating entity "sync_and_debounce" for hierarchy "sync_and_debounce:debounce" File: C:/Users/KIRUHA/Documents/fpga/dynamic_arbiter_demo.sv Line: 17
+Info (12128): Elaborating entity "sync_and_debounce_one" for hierarchy "sync_and_debounce:debounce|sync_and_debounce_one:gen_sync_and_debounce[0].i_sync_and_debounce_one" File: C:/Users/KIRUHA/Documents/fpga/sync_and_debounce.sv Line: 26
+Info (12128): Elaborating entity "display" for hierarchy "display:d" File: C:/Users/KIRUHA/Documents/fpga/dynamic_arbiter_demo.sv Line: 28
 Warning (10230): Verilog HDL assignment warning at display.sv(32): truncated value with size 32 to match size of target (16) File: C:/Users/KIRUHA/Documents/fpga/display.sv Line: 32
-Info (12128): Elaborating entity "slow_arbiter" for hierarchy "slow_arbiter:sa" File: C:/Users/KIRUHA/Documents/fpga/dynamic_arbiter_demo.sv Line: 33
+Info (12128): Elaborating entity "slow_arbiter" for hierarchy "slow_arbiter:sa" File: C:/Users/KIRUHA/Documents/fpga/dynamic_arbiter_demo.sv Line: 40
 Warning (10230): Verilog HDL assignment warning at slow_arbiter.sv(15): truncated value with size 32 to match size of target (24) File: C:/Users/KIRUHA/Documents/fpga/slow_arbiter.sv Line: 15
 Info (12128): Elaborating entity "dynamic_priority_arbiter_rra" for hierarchy "slow_arbiter:sa|dynamic_priority_arbiter_rra:dpar" File: C:/Users/KIRUHA/Documents/fpga/slow_arbiter.sv Line: 28
 Warning (10230): Verilog HDL assignment warning at dynamic_priority_arbiter_rra.sv(12): truncated value with size 32 to match size of target (3) File: C:/Users/KIRUHA/Documents/fpga/dynamic_priority_arbiter_rra.sv Line: 12
@@ -416,13 +534,13 @@ Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Users/KIRUHA/Documents/fpga/output_files/dynamic_arbiter_demo.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 138 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 262 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
     Info (21059): Implemented 16 output pins
-    Info (21061): Implemented 112 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4757 megabytes
-    Info: Processing ended: Wed Apr 07 20:08:41 2021
+    Info (21061): Implemented 236 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4758 megabytes
+    Info: Processing ended: Sun Apr 11 18:34:36 2021
     Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:21
 

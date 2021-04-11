@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Wed Apr 07 20:08:41 2021
+Analysis & Synthesis Status : Successful - Sun Apr 11 18:34:36 2021
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : dynamic_arbiter_demo
 Top-level Entity Name : dynamic_arbiter_demo
 Family : Cyclone IV E
-Total logic elements : 112
-    Total combinational functions : 112
-    Dedicated logic registers : 53
-Total registers : 53
+Total logic elements : 236
+    Total combinational functions : 220
+    Dedicated logic registers : 149
+Total registers : 149
 Total pins : 26
 Total virtual pins : 0
 Total memory bits : 0
