@@ -1,5 +1,5 @@
 Analysis & Synthesis report for dynamic_arbiter_demo
-Sun Apr 11 18:34:36 2021
+Sun Apr 11 18:49:55 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -59,7 +59,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Apr 11 18:34:36 2021       ;
+; Analysis & Synthesis Status        ; Successful - Sun Apr 11 18:49:55 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; dynamic_arbiter_demo                        ;
 ; Top-level Entity Name              ; dynamic_arbiter_demo                        ;
@@ -179,19 +179,19 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                       ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                   ; Library ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------+---------+
-; display.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/KIRUHA/Documents/fpga/display.sv                      ;         ;
-; dynamic_arbiter_demo.sv          ; yes             ; User SystemVerilog HDL File  ; C:/Users/KIRUHA/Documents/fpga/dynamic_arbiter_demo.sv         ;         ;
-; rra.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/KIRUHA/Documents/fpga/rra.sv                          ;         ;
-; dynamic_priority_arbiter_rra.sv  ; yes             ; User SystemVerilog HDL File  ; C:/Users/KIRUHA/Documents/fpga/dynamic_priority_arbiter_rra.sv ;         ;
-; slow_arbiter.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/KIRUHA/Documents/fpga/slow_arbiter.sv                 ;         ;
-; sync_and_debounce_one.sv         ; yes             ; User SystemVerilog HDL File  ; C:/Users/KIRUHA/Documents/fpga/sync_and_debounce_one.sv        ;         ;
-; sync_and_debounce.sv             ; yes             ; User SystemVerilog HDL File  ; C:/Users/KIRUHA/Documents/fpga/sync_and_debounce.sv            ;         ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                              ;
++---------------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path            ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                               ; Library ;
++---------------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+; src/arbiter/slow_arbiter.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/KIRUHA/Documents/fpga/src/arbiter/slow_arbiter.sv                 ;         ;
+; src/arbiter/rra.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/KIRUHA/Documents/fpga/src/arbiter/rra.sv                          ;         ;
+; src/arbiter/dynamic_priority_arbiter_rra.sv ; yes             ; User SystemVerilog HDL File  ; C:/Users/KIRUHA/Documents/fpga/src/arbiter/dynamic_priority_arbiter_rra.sv ;         ;
+; src/utils/sync_and_debounce_one.sv          ; yes             ; User SystemVerilog HDL File  ; C:/Users/KIRUHA/Documents/fpga/src/utils/sync_and_debounce_one.sv          ;         ;
+; src/utils/sync_and_debounce.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/KIRUHA/Documents/fpga/src/utils/sync_and_debounce.sv              ;         ;
+; src/dynamic_arbiter_demo.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/KIRUHA/Documents/fpga/src/dynamic_arbiter_demo.sv                 ;         ;
+; src/display.sv                              ; yes             ; User SystemVerilog HDL File  ; C:/Users/KIRUHA/Documents/fpga/src/display.sv                              ;         ;
++---------------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -499,37 +499,37 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Apr 11 18:34:27 2021
+    Info: Processing started: Sun Apr 11 18:49:46 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off dynamic_arbiter_demo -c dynamic_arbiter_demo
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file display.sv
-    Info (12023): Found entity 1: display File: C:/Users/KIRUHA/Documents/fpga/display.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file dynamic_arbiter_demo.sv
-    Info (12023): Found entity 1: dynamic_arbiter_demo File: C:/Users/KIRUHA/Documents/fpga/dynamic_arbiter_demo.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file linear_dynamic_priority_arbiter.sv
-    Info (12023): Found entity 1: linear_dynamic_priority_arbiter File: C:/Users/KIRUHA/Documents/fpga/linear_dynamic_priority_arbiter.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file rra.sv
-    Info (12023): Found entity 1: rra File: C:/Users/KIRUHA/Documents/fpga/rra.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file dynamic_priority_arbiter_rra.sv
-    Info (12023): Found entity 1: dynamic_priority_arbiter_rra File: C:/Users/KIRUHA/Documents/fpga/dynamic_priority_arbiter_rra.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file slow_arbiter.sv
-    Info (12023): Found entity 1: slow_arbiter File: C:/Users/KIRUHA/Documents/fpga/slow_arbiter.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file sync_and_debounce_one.sv
-    Info (12023): Found entity 1: sync_and_debounce_one File: C:/Users/KIRUHA/Documents/fpga/sync_and_debounce_one.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file sync_and_debounce.sv
-    Info (12023): Found entity 1: sync_and_debounce File: C:/Users/KIRUHA/Documents/fpga/sync_and_debounce.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/arbiter/slow_arbiter.sv
+    Info (12023): Found entity 1: slow_arbiter File: C:/Users/KIRUHA/Documents/fpga/src/arbiter/slow_arbiter.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/arbiter/rra.sv
+    Info (12023): Found entity 1: rra File: C:/Users/KIRUHA/Documents/fpga/src/arbiter/rra.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/arbiter/linear_dynamic_priority_arbiter.sv
+    Info (12023): Found entity 1: linear_dynamic_priority_arbiter File: C:/Users/KIRUHA/Documents/fpga/src/arbiter/linear_dynamic_priority_arbiter.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/arbiter/dynamic_priority_arbiter_rra.sv
+    Info (12023): Found entity 1: dynamic_priority_arbiter_rra File: C:/Users/KIRUHA/Documents/fpga/src/arbiter/dynamic_priority_arbiter_rra.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/utils/sync_and_debounce_one.sv
+    Info (12023): Found entity 1: sync_and_debounce_one File: C:/Users/KIRUHA/Documents/fpga/src/utils/sync_and_debounce_one.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/utils/sync_and_debounce.sv
+    Info (12023): Found entity 1: sync_and_debounce File: C:/Users/KIRUHA/Documents/fpga/src/utils/sync_and_debounce.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/dynamic_arbiter_demo.sv
+    Info (12023): Found entity 1: dynamic_arbiter_demo File: C:/Users/KIRUHA/Documents/fpga/src/dynamic_arbiter_demo.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/display.sv
+    Info (12023): Found entity 1: display File: C:/Users/KIRUHA/Documents/fpga/src/display.sv Line: 1
 Info (12127): Elaborating entity "dynamic_arbiter_demo" for the top level hierarchy
-Info (12128): Elaborating entity "sync_and_debounce" for hierarchy "sync_and_debounce:debounce" File: C:/Users/KIRUHA/Documents/fpga/dynamic_arbiter_demo.sv Line: 17
-Info (12128): Elaborating entity "sync_and_debounce_one" for hierarchy "sync_and_debounce:debounce|sync_and_debounce_one:gen_sync_and_debounce[0].i_sync_and_debounce_one" File: C:/Users/KIRUHA/Documents/fpga/sync_and_debounce.sv Line: 26
-Info (12128): Elaborating entity "display" for hierarchy "display:d" File: C:/Users/KIRUHA/Documents/fpga/dynamic_arbiter_demo.sv Line: 28
-Warning (10230): Verilog HDL assignment warning at display.sv(32): truncated value with size 32 to match size of target (16) File: C:/Users/KIRUHA/Documents/fpga/display.sv Line: 32
-Info (12128): Elaborating entity "slow_arbiter" for hierarchy "slow_arbiter:sa" File: C:/Users/KIRUHA/Documents/fpga/dynamic_arbiter_demo.sv Line: 40
-Warning (10230): Verilog HDL assignment warning at slow_arbiter.sv(15): truncated value with size 32 to match size of target (24) File: C:/Users/KIRUHA/Documents/fpga/slow_arbiter.sv Line: 15
-Info (12128): Elaborating entity "dynamic_priority_arbiter_rra" for hierarchy "slow_arbiter:sa|dynamic_priority_arbiter_rra:dpar" File: C:/Users/KIRUHA/Documents/fpga/slow_arbiter.sv Line: 28
-Warning (10230): Verilog HDL assignment warning at dynamic_priority_arbiter_rra.sv(12): truncated value with size 32 to match size of target (3) File: C:/Users/KIRUHA/Documents/fpga/dynamic_priority_arbiter_rra.sv Line: 12
-Info (12128): Elaborating entity "rra" for hierarchy "slow_arbiter:sa|dynamic_priority_arbiter_rra:dpar|rra:RRA" File: C:/Users/KIRUHA/Documents/fpga/dynamic_priority_arbiter_rra.sv Line: 35
-Warning (10230): Verilog HDL assignment warning at rra.sv(22): truncated value with size 32 to match size of target (3) File: C:/Users/KIRUHA/Documents/fpga/rra.sv Line: 22
+Info (12128): Elaborating entity "sync_and_debounce" for hierarchy "sync_and_debounce:debounce" File: C:/Users/KIRUHA/Documents/fpga/src/dynamic_arbiter_demo.sv Line: 17
+Info (12128): Elaborating entity "sync_and_debounce_one" for hierarchy "sync_and_debounce:debounce|sync_and_debounce_one:gen_sync_and_debounce[0].i_sync_and_debounce_one" File: C:/Users/KIRUHA/Documents/fpga/src/utils/sync_and_debounce.sv Line: 26
+Info (12128): Elaborating entity "display" for hierarchy "display:d" File: C:/Users/KIRUHA/Documents/fpga/src/dynamic_arbiter_demo.sv Line: 28
+Warning (10230): Verilog HDL assignment warning at display.sv(32): truncated value with size 32 to match size of target (16) File: C:/Users/KIRUHA/Documents/fpga/src/display.sv Line: 32
+Info (12128): Elaborating entity "slow_arbiter" for hierarchy "slow_arbiter:sa" File: C:/Users/KIRUHA/Documents/fpga/src/dynamic_arbiter_demo.sv Line: 40
+Warning (10230): Verilog HDL assignment warning at slow_arbiter.sv(15): truncated value with size 32 to match size of target (24) File: C:/Users/KIRUHA/Documents/fpga/src/arbiter/slow_arbiter.sv Line: 15
+Info (12128): Elaborating entity "dynamic_priority_arbiter_rra" for hierarchy "slow_arbiter:sa|dynamic_priority_arbiter_rra:dpar" File: C:/Users/KIRUHA/Documents/fpga/src/arbiter/slow_arbiter.sv Line: 28
+Warning (10230): Verilog HDL assignment warning at dynamic_priority_arbiter_rra.sv(12): truncated value with size 32 to match size of target (3) File: C:/Users/KIRUHA/Documents/fpga/src/arbiter/dynamic_priority_arbiter_rra.sv Line: 12
+Info (12128): Elaborating entity "rra" for hierarchy "slow_arbiter:sa|dynamic_priority_arbiter_rra:dpar|rra:RRA" File: C:/Users/KIRUHA/Documents/fpga/src/arbiter/dynamic_priority_arbiter_rra.sv Line: 35
+Warning (10230): Verilog HDL assignment warning at rra.sv(22): truncated value with size 32 to match size of target (3) File: C:/Users/KIRUHA/Documents/fpga/src/arbiter/rra.sv Line: 22
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Users/KIRUHA/Documents/fpga/output_files/dynamic_arbiter_demo.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
@@ -540,7 +540,7 @@ Info (21057): Implemented 262 device resources after synthesis - the final resou
     Info (21061): Implemented 236 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 4758 megabytes
-    Info: Processing ended: Sun Apr 11 18:34:36 2021
+    Info: Processing ended: Sun Apr 11 18:49:55 2021
     Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:21
 

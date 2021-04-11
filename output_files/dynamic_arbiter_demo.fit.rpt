@@ -1,5 +1,5 @@
 Fitter report for dynamic_arbiter_demo
-Sun Apr 11 18:34:41 2021
+Sun Apr 11 18:50:01 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -66,7 +66,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Sun Apr 11 18:34:41 2021       ;
+; Fitter Status                      ; Successful - Sun Apr 11 18:50:01 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; dynamic_arbiter_demo                        ;
 ; Top-level Entity Name              ; dynamic_arbiter_demo                        ;
@@ -1014,26 +1014,26 @@ Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info (176353): Automatically promoted node clk~input (placed in PIN 23 (CLK1, DIFFCLK_0n)) File: C:/Users/KIRUHA/Documents/fpga/dynamic_arbiter_demo.sv Line: 2
+Info (176353): Automatically promoted node clk~input (placed in PIN 23 (CLK1, DIFFCLK_0n)) File: C:/Users/KIRUHA/Documents/fpga/src/dynamic_arbiter_demo.sv Line: 2
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G2
-Info (176353): Automatically promoted node rst~input (placed in PIN 90 (CLK5, DIFFCLK_2n)) File: C:/Users/KIRUHA/Documents/fpga/dynamic_arbiter_demo.sv Line: 3
+Info (176353): Automatically promoted node rst~input (placed in PIN 90 (CLK5, DIFFCLK_2n)) File: C:/Users/KIRUHA/Documents/fpga/src/dynamic_arbiter_demo.sv Line: 3
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G7
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node slow_arbiter:sa|dynamic_priority_arbiter_rra:dpar|rra:RRA|grant_reg[0] File: C:/Users/KIRUHA/Documents/fpga/rra.sv Line: 15
-        Info (176357): Destination node slow_arbiter:sa|dynamic_priority_arbiter_rra:dpar|rra:RRA|grant_reg[1] File: C:/Users/KIRUHA/Documents/fpga/rra.sv Line: 15
-        Info (176357): Destination node slow_arbiter:sa|dynamic_priority_arbiter_rra:dpar|rra:RRA|grant_reg[2] File: C:/Users/KIRUHA/Documents/fpga/rra.sv Line: 15
-        Info (176357): Destination node slow_arbiter:sa|dynamic_priority_arbiter_rra:dpar|rra:RRA|pointer_reg[1] File: C:/Users/KIRUHA/Documents/fpga/rra.sv Line: 15
-        Info (176357): Destination node slow_arbiter:sa|dynamic_priority_arbiter_rra:dpar|rra:RRA|pointer_reg[2] File: C:/Users/KIRUHA/Documents/fpga/rra.sv Line: 15
-        Info (176357): Destination node display:d|counter[14] File: C:/Users/KIRUHA/Documents/fpga/display.sv Line: 28
-        Info (176357): Destination node display:d|counter[13] File: C:/Users/KIRUHA/Documents/fpga/display.sv Line: 28
-        Info (176357): Destination node display:d|counter[15] File: C:/Users/KIRUHA/Documents/fpga/display.sv Line: 28
-        Info (176357): Destination node display:d|counter[12] File: C:/Users/KIRUHA/Documents/fpga/display.sv Line: 28
-        Info (176357): Destination node slow_arbiter:sa|counter[0] File: C:/Users/KIRUHA/Documents/fpga/slow_arbiter.sv Line: 11
+        Info (176357): Destination node slow_arbiter:sa|dynamic_priority_arbiter_rra:dpar|rra:RRA|grant_reg[0] File: C:/Users/KIRUHA/Documents/fpga/src/arbiter/rra.sv Line: 15
+        Info (176357): Destination node slow_arbiter:sa|dynamic_priority_arbiter_rra:dpar|rra:RRA|grant_reg[1] File: C:/Users/KIRUHA/Documents/fpga/src/arbiter/rra.sv Line: 15
+        Info (176357): Destination node slow_arbiter:sa|dynamic_priority_arbiter_rra:dpar|rra:RRA|grant_reg[2] File: C:/Users/KIRUHA/Documents/fpga/src/arbiter/rra.sv Line: 15
+        Info (176357): Destination node slow_arbiter:sa|dynamic_priority_arbiter_rra:dpar|rra:RRA|pointer_reg[1] File: C:/Users/KIRUHA/Documents/fpga/src/arbiter/rra.sv Line: 15
+        Info (176357): Destination node slow_arbiter:sa|dynamic_priority_arbiter_rra:dpar|rra:RRA|pointer_reg[2] File: C:/Users/KIRUHA/Documents/fpga/src/arbiter/rra.sv Line: 15
+        Info (176357): Destination node display:d|counter[14] File: C:/Users/KIRUHA/Documents/fpga/src/display.sv Line: 28
+        Info (176357): Destination node display:d|counter[13] File: C:/Users/KIRUHA/Documents/fpga/src/display.sv Line: 28
+        Info (176357): Destination node display:d|counter[15] File: C:/Users/KIRUHA/Documents/fpga/src/display.sv Line: 28
+        Info (176357): Destination node display:d|counter[12] File: C:/Users/KIRUHA/Documents/fpga/src/display.sv Line: 28
+        Info (176357): Destination node slow_arbiter:sa|counter[0] File: C:/Users/KIRUHA/Documents/fpga/src/arbiter/slow_arbiter.sv Line: 11
         Info (176358): Non-global destination nodes limited to 10 nodes
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -1051,13 +1051,13 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file C:/Users/KIRUHA/Documents/fpga/output_files/dynamic_arbiter_demo.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 5490 megabytes
-    Info: Processing ended: Sun Apr 11 18:34:42 2021
+    Info: Peak virtual memory: 5491 megabytes
+    Info: Processing ended: Sun Apr 11 18:50:01 2021
     Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:06
+    Info: Total CPU time (on all processors): 00:00:05
 
 
 +----------------------------+
